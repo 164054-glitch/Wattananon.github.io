@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Noto Sans Thai", sans-serif;
+    background: #17120e;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 5%;
+    background: rgba(20, 14, 10, 0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.brand {
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a, footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover, footer a:hover {
+    opacity: .7;
+}
+
+.hero {
+    min-height: 330px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 104, 28, .28), transparent 35%),
+        linear-gradient(135deg, #1b120b, #3b1d0d);
+}
+
+.eyebrow {
+    color: #ff5a1f;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 62px);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.hero p:last-child {
+    font-size: clamp(15px, 2vw, 20px);
+    color: #eee;
+}
+
+.pages {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding: 35px 18px 70px;
+}
+
+.page-card {
+    position: relative;
+    margin: 0 auto 35px;
+    background: #fff;
+    box-shadow: 0 15px 45px rgba(0,0,0,.35);
+    overflow: hidden;
+}
+
+.page-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.page-number {
+    position: absolute;
+    z-index: 2;
+    top: 12px;
+    right: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(0,0,0,.72);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px 45px;
+    color: #cfcfcf;
+    background: #0d0a08;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff6a2a;
+}
+
+@media (max-width: 700px) {
+    .topbar {
+        padding: 12px 16px;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 270px;
+        padding: 50px 18px;
+    }
+
+    .pages {
+        padding: 15px 7px 40px;
+    }
+
+    .page-card {
+        margin-bottom: 18px;
+    }
+
+    .page-number {
+        top: 8px;
+        right: 8px;
+    }
+}
